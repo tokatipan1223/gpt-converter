@@ -176,7 +176,7 @@
           body: JSON.stringify({
             prompt: (() => {
               if (mode === "translate") {
-                return `次の文章の言語を判定し、以下のルールで翻訳してください：\n- 日本語なら自然な英語に翻訳\n- 英語なら自然な日本語に翻訳\n\n対象文：\n${inputText}`;
+                return `次の文章の言語を判定し、以下のルールで翻訳してください：\n- 日本語なら翻訳部分は「翻訳：」で始めてください\n- 英語なら翻訳部分は「翻訳：」で始めてください\n\n対象文：\n${inputText}`;
               }
               const promptMap = {
                 "polite": `以下の文章を敬語に丁寧に変換してください:\n${inputText}`,
